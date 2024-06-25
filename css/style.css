@@ -128,6 +128,7 @@ P {
 
 /* styles.css */
 @import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap');
 
 * {
     margin: 0;
@@ -165,6 +166,15 @@ body {
     position: relative;
     overflow: hidden;
     perspective: 1px;
+    z-index: 1; /* Ajuste para cada contenedor parallax */
+}
+
+.sponsors.parallax-container {
+    z-index: 2; /* Ajuste para cada contenedor parallax */
+}
+
+.sponsors .parallax-content {
+    position: relative;
 }
 
 .parallax-content {
@@ -189,18 +199,47 @@ body {
     z-index: 2; /* Ajuste para asegurar que main-content esté encima de parallax-container */
 }
 
+.main-content.presence {
+    z-index: 3;
+    align-items: flex-start;
+}
+
 .m-content-ab {
     width: 100%;
     text-align: center;
-    background-color: #FDF7E4;
 }
 
-.m-content-ab > * {
-    color: #fdb731;
+.timer-container {
+    background-color: #e6ddd4;
+}
+
+/* #FFB832 */
+
+.m-content-ab.timer-container > * {
+    color: #959589;
+}
+
+.m-content-ab.sponsors-card > * {
+    color: #a4927c;
+}
+
+.m-content-ab.presencia > * {
+    color: #8d7569;
 }
 
 .m-content-ab h1 {
     padding: 5vh 0;
+}
+
+.presence {
+    margin: 2.5vh 0 0 0;
+    background: linear-gradient(315deg, #c1a78e, #ecdfcd);
+    position: relative;
+    perspective: 1px;
+}
+
+.presence_p {
+    padding: 5vh 0 0 0;
 }
 
 h1 {
@@ -213,6 +252,16 @@ h1 {
 .party-h1 {
     font-size: 38pt;
     margin: 5vh 0;
+    font-family: "Playwrite NG Modern", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.new-font {
+    font-family: "Playwrite NG Modern", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 28pt;
 }
 
 p {
@@ -228,7 +277,7 @@ p {
 }
 
 .sponsors-card {
-    border: 1px solid #fdb731;
+    border: 10px double #a4927e;
     padding: 10px;
     margin: 10px 0;
 }
@@ -237,19 +286,57 @@ p {
     font-size: 25pt;
 }
 
-.heart-emoji {
-    color: #d91f24;
+.hr_padrinos {
+    width: 50%;
 }
 
-hr {
-    transform: translateX(50%);
-    width: 50%;
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #fdb731;
-    margin: 1em 0;
-    padding: 0;
+.icon-option {
+    display: none;
+}
+
+.bubble-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.bubble {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background-color: #fff;
+    box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.15);
+    height: 6rem;
+    width: 6rem;
+    margin: 5vh 0 0 0;
+    transition: background 0.4s ease, transform 0.3s ease;
+}
+
+._1:hover,
+._1:focus-visible {
+    background: url('../assets/maps_bg.jpg');
+    background-size: cover;
+    transform: scale(1.05);
+}
+
+.bubble path {
+    transition: fill 0.4s ease;
+}
+
+.bubble:hover path, .bubble:focus-visible path {
+    fill: #fff;
+}
+
+.symbols {
+    height: 3.2rem;
+}
+
+.bubble:hover svg, .bubble:focus-visible svg {
+    will-change: background, transform, fill; /* Sugerencia al navegador para optimizar el cambio */
 }
 
 @media screen and (min-width: 761px) and (max-width: 990px) {
@@ -260,6 +347,9 @@ hr {
         width: 50%;
         height: auto;
     }
+    .hr_padrinos {
+        width: 50%;
+    }
 }
 
 @media screen and (max-width: 760px) {
@@ -269,6 +359,15 @@ hr {
     .center img {
         width: 100%;
         height: auto;
+    }
+    .hr_padrinos {
+        width: 100%;
+    }
+    .sponsors-card .new-font {
+        font-size: 3.86vh;
+    }
+    .sponsors-card p {
+        font-size: 9.1vh;
     }
 }
 
@@ -283,5 +382,14 @@ hr {
     }
     .start {
         height: 110vh;
+    }
+    .hr_padrinos {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .icon-option {
+        display: block;
     }
 }

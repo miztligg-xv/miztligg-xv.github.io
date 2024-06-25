@@ -1,10 +1,29 @@
 
-window.addEventListener('scroll', function() {
-    const parallaxContent = document.querySelector('.parallax-content');
-    let scrollPosition = window.scrollY;
+// document.addEventListener("DOMContentLoaded", function () {
+//     // Aplicamos el parallax a ambas secciones "start" y "sponsors"
+//     const parallaxContainers = document.querySelectorAll(".parallax-container");
+//     const parallaxElements = document.querySelectorAll(".parallax-content");
 
-    parallaxContent.style.transform = `translateY(${scrollPosition * 1}px) translateZ(-1px) scale(2)`;
+//     window.addEventListener("scroll", function () {
+//         let scrollPosition = window.scrollY;
+//         console.log("Original SP:" + scrollPosition);
+//         parallaxContainers.forEach((container, index) => {
+//             const parallaxElement = parallaxElements[index];
+//             if (parallaxElement) {
+//                 console.log(parallaxElement.style.transform = `translateY(${scrollPosition * 1}px) translateZ(-1px) scale(2)`)
+//             }
+//         });
+//     });
+// });
+
+window.addEventListener('scroll', function() {
+  const parallaxContent = document.querySelectorAll('.parallax-content');
+  let scrollPosition = window.scrollY;
+  console.log("SP:" + scrollPosition)
+
+  parallaxContent[0].style.transform = `translateY(${scrollPosition * 1}px) translateZ(-1px) scale(2)`;
 });
+
 
 var countDownDate = new Date("Jul 27, 2024 15:00:00").getTime();
 

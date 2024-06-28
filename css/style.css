@@ -287,8 +287,14 @@ p.little {
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 500px) {
     .sponsors {
-        padding-bottom: 23vh;
+        padding-bottom: 30vh;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .sponsors {
+        padding-bottom: 60vh;
     }
 }

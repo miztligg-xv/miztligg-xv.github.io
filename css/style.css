@@ -293,7 +293,7 @@ p.little {
     }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 400px) {
     .sponsors {
         padding-bottom: 60vh;
     }

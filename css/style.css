@@ -1,132 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background: #fff;
-    margin: 0;
-    padding: 0;
-}
-
-.start {
-    height: 100vh;;
-    width: 100vw;
-    display: flex;
-}
-
-.parallax-container {
-    position: relative;
-    overflow: hidden;
-    perspective: 1px;
-}
-
-.center {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.parallax-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateZ(-1px) scale(2);
-    z-index: -1;
-}
-
-.center img {
-    width: 50%;
-    height: 50%;
-    object-fit: contain;
-}
-
-.main-content {
-    position: relative;
-}
-
-.m-content-ab {
-    position: absolute; 
-    width: 100%;
-    background-color: #FDF7E4;
-    text-align: center;
-}
-
-.m-content-ab > * {
-    position: relative;
-    color: #fdb731;
-}
-
-.m-content-ab h1 {
-    margin-top: 5vh;
-}
-
-h1 {
-    font-family: "Style Script", cursive;
-    font-weight: 400;
-    font-style: normal;  
-    font-size: 55.0pt; 
-}
-
-.party-h1 {
-    font-size: 40pt;
-    margin: 5vh 0;
-}
-
-P {
-    font-family: "Style Script", cursive;
-    font-weight: 400;
-    font-style: normal;  
-    font-size: 43.0pt; 
-    position: absolute; 
-}
-
-.sponsors {
-    background: #fff;
-    position: relative;
-}
-
-@media screen and (min-width: 761px) and (max-width: 990px) {
-    .center {
-        flex-direction: row;
-    }
-    .center img {
-        width: 50%;
-        height: auto;
-    }
-}
-
-@media screen and (max-width: 760px) {
-    .center {
-        flex-direction: column;
-    }
-    .center img {
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media screen and (orientation: landscape) and (max-width: 991px) {
-    .center {
-        flex-direction: row;
-        align-items: center;
-    }
-    .center img {
-        width: 50%;
-        height: auto;
-    }
-    .start {
-        height: 110vh;
-    }
-} */
-
-/* styles.css */
 @import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap');
 
@@ -232,10 +103,11 @@ body {
 }
 
 .presence {
-    margin: 2.5vh 0 0 0;
     background: linear-gradient(315deg, #c1a78e, #ecdfcd);
     position: relative;
     perspective: 1px;
+    display: flex;
+    justify-content: center;
 }
 
 .presence_p {
@@ -273,21 +145,21 @@ p {
 
 .sponsors {
     background: #fff;
-    padding: 20px;
+    padding: 20px 20px 6vh 20px;
 }
 
 .sponsors-card {
     border: 10px double #a4927e;
     padding: 10px;
-    margin: 10px 0;
 }
 
-.sponsors p.little {
-    font-size: 25pt;
+p.little {
+    font-size: 20pt;
 }
 
 .hr_padrinos {
     width: 50%;
+    margin: 0 0 2vh 0;
 }
 
 .icon-option {
@@ -299,6 +171,7 @@ p {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin: 5vh 0;
 }
 
 .bubble {
@@ -312,8 +185,9 @@ p {
     box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.15);
     height: 6rem;
     width: 6rem;
-    margin: 5vh 0 0 0;
-    transition: background 0.4s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: scale3d(0,0,0);
+    transition: background 0.4s ease, opacity 0.5s, transform 0.8s ease;
 }
 
 ._1:hover,
@@ -337,6 +211,25 @@ p {
 
 .bubble:hover svg, .bubble:focus-visible svg {
     will-change: background, transform, fill; /* Sugerencia al navegador para optimizar el cambio */
+}
+
+.inside {
+    transform: scale3d(1,1,1) translate(0px);
+    opacity: 1;
+}
+
+.green-code {
+    background: -webkit-linear-gradient(#03a098, #01ef96);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dress-code_img {
+    width: 100%;
+    height: 26vh;
+    object-fit: contain;
+    margin: 8vh 0;
 }
 
 @media screen and (min-width: 761px) and (max-width: 990px) {
@@ -391,5 +284,11 @@ p {
 @media screen and (max-width: 700px) {
     .icon-option {
         display: block;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .sponsors {
+        padding-bottom: 23vh;
     }
 }

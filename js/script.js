@@ -151,10 +151,10 @@ document.getElementById('rsvp-form').addEventListener('submit', function(event) 
 
   if (isMobile) {
       // Si es un dispositivo móvil, usar el enlace tradicional de WhatsApp
-      whatsappLink = `https://wa.me/+525540741718?text=${encodedMessage}`;
+      whatsappLink = `https://wa.me/+525646104115?text=${encodedMessage}`;
   } else {
       // Si es una computadora, usar el enlace de WhatsApp Web
-      whatsappLink = `https://web.whatsapp.com/send?phone=+525540741718&text=${encodedMessage}`;
+      whatsappLink = `https://web.whatsapp.com/send?phone=+525646104115&text=${encodedMessage}`;
   }
 
   // Abrir WhatsApp con el mensaje precompuesto

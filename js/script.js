@@ -57,8 +57,8 @@ const observador = new IntersectionObserver(cargarElem, {
 
 let elemCounter = 0;
 while (elemCounter <= 10) {
-  var elemName = 'obv_element_' + elemCounter;
-  var elemNameid = document.getElementById(elemName);
+  let elemName = 'obv_element_' + elemCounter;
+  let elemNameid = document.getElementById(elemName);
   if (elemNameid) {
     observador.observe(elemNameid);
   }
@@ -88,7 +88,7 @@ if (distance < 0) {
   }
 }, 1000);
 
-var swiper = new Swiper(".card_slider", {
+let swiper = new Swiper(".card_slider", {
   // slidesPerView: 3,
   spaceBetween: 30,
   loop: true,
@@ -119,10 +119,6 @@ var swiper = new Swiper(".card_slider", {
     },
   },
 });
-
-// 
-
-// script.js
 
 // Función para verificar si el dispositivo es móvil
 window.mobileCheck = function() {
@@ -165,5 +161,19 @@ document.getElementById('rsvp-form').addEventListener('submit', function(event) 
   window.open(whatsappLink, '_blank');
 });
 
+const audio = document.getElementById("myaudio");
+const playButton = document.getElementById('playButton');
+const playIcon = document.getElementById('playIcon');
+audio.volume = 0.2;
 
-// 
+playButton.addEventListener('click', () => {
+  if (audio.paused) {
+    audio.play();
+    playIcon.src="../assets/pause-solid.svg";
+    // playButton.textContent = 'Pause';
+  } else {
+    audio.pause();
+    playIcon.src="../assets/play-solid.svg";
+    // playButton.textContent = 'Play';
+  }
+});

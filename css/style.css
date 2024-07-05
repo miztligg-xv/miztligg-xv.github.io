@@ -90,8 +90,6 @@ a:active:hover, a:visited:hover, a:link:hover, a:active, a:hover, a:visited, a:l
     background-color: #e6ddd4;
 }
 
-/* #FFB832 */
-
 .m-content-ab.timer-container > * {
     color: #959589;
 }
@@ -392,7 +390,7 @@ img.envelope {
     transition: 0.3s all;
 }
 
-.gift-card-content a.amazon-btn:hover, .button-wrapper button:hover {
+.gift-card-content a.amazon-btn:hover, .gift-card-content a.amazon-btn:focus-visible, .button-wrapper button:hover, .button-wrapper button:focus-visible {
     transform: scale(1.1);
 }
 
@@ -516,7 +514,6 @@ input {
     margin: 0;
     font-size: 19px;
     display: inline;
-    outline: none;
 }
 
 input[type="text"] {
@@ -526,6 +523,7 @@ input[type="text"] {
     padding: 10px;
     margin-bottom: 40px;
     background: transparent;
+    outline: none;
 }
 
 input[type="radio"] {
@@ -604,6 +602,20 @@ footer {
     height: 100px;
     margin: 2vh 0;
     object-fit: contain;
+}
+
+#playButton {
+    padding: 0.40em;
+    padding: calc(10px * .7);
+    position: fixed;
+    bottom: 20%;
+    right: 5%;
+    z-index: 99;
+}
+
+#playButton img {
+    height: 1.2rem;
+    width: 1.2em;
 }
 
 @supports (-webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0) ) or (clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0) ) {

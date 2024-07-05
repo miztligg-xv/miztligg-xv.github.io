@@ -698,7 +698,7 @@ footer {
 
 @media (min-width: 768px) {
     .gift-card-outside {
-        width: 33.333%;
+        width: 50%;
     }
     .confirm-container, .rsvp-form-container {
         width: 50%;

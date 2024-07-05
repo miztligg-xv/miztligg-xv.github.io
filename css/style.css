@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
 
 * {
     margin: 0;
@@ -12,6 +14,10 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+}
+
+a:active:hover, a:visited:hover, a:link:hover, a:active, a:hover, a:visited, a:link {
+    text-decoration: none;
 }
 
 .start {
@@ -232,6 +238,397 @@ p.little {
     margin: 8vh 0;
 }
 
+.svg-separator {
+    display: block;
+    background: 0 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    -webkit-transform: translateY(-100%) translateY(2px);
+    transform: translateY(-100%) translateY(2px);
+    width: 100%;
+}
+
+.img_box img {
+    max-width: 100%;
+    box-shadow: 2px 4px 20px -7px black;
+}
+
+.slider_container {
+    padding-bottom: 15vh;
+}
+
+.slider_container .container {
+    padding: 0 15px;
+    max-width: 1230px;
+    margin: 0 auto;
+}
+
+.swiper.card_slider {
+    padding: 20px 0 50px 0;
+}
+
+.swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+    background-color: #636363B3;
+    opacity: 0.5;
+}
+
+.swiper .swiper-button-next, .swiper-button-prev {
+    background: linear-gradient(#03a098, #01ef96);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: linear-gradient(#01ef96, #03a098);
+}
+
+p.single-p.gifts-table-p.header-p {
+    padding: 5vh 0;
+}
+
+.single-p {
+    text-align: center;
+}
+
+.p-gallery {
+    padding-top: 30px;
+}
+
+.gifts-table {
+    background: #ffdfad;
+    min-height: 50vh;
+    position: relative;
+    padding: 0 20px 10vh;
+}
+
+.gifts-table, .gifts-table > * {
+    z-index: 1;
+}
+
+.gifts-table-p {
+    color: #9d8274;
+}
+
+.gifts-table-background-overlay {   
+    background-image: url('../assets/butterflies-edit.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.gift-cards-container {
+   display: flex;
+   margin-right: auto;
+   margin-left: auto;
+   position: relative;
+   max-width: 1200px;
+   flex-wrap: wrap;
+}
+
+.gift-card-outside {
+    position: relative;
+    min-height: 1px;
+    display: flex;
+}
+
+.gift-card-content {
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.12);
+    background: rgba( 255, 255, 255, 0.3 );
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    margin: 10px 10px 10px 10px;
+    padding: 30px 20px 50px 20px;
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.gift-card-content p, .gift-card-content a, .form-header p, .select-option, label {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.mercado_pago-stp, .amazon, .envelope {
+    width: 100%;
+    height: 70px;
+    object-fit: contain;
+    margin: 30px 0;
+}
+
+img.amazon {
+    padding: 12px 0;
+}
+
+img.envelope {
+    height: 115px;
+}
+
+.gift-card-content a.amazon-btn {
+    color: #FFFFFF;
+    background-color: #E7858F;
+    border-radius: 10px 10px 10px 10px;
+    padding: 15px 60px 15px 60px;
+    font-size: 18px;
+    transition: 0.3s all;
+}
+
+.gift-card-content a.amazon-btn:hover, .button-wrapper button:hover {
+    transform: scale(1.1);
+}
+
+.envelope-container {
+    justify-content: center;
+}
+
+.rsvp-container {
+    padding: 50px 30px 50px 30px;
+    position: relative;
+    background: #FFE5E6;
+}
+
+.rsvp-content {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    min-height: 100vh;
+    align-items: center;
+    z-index: 1;
+}
+
+.confirm-container, .rsvp-form-container {
+    display: flex;
+    position: relative;
+    min-height: 1px;
+}
+
+.rsvp, form {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: center;
+}
+
+.confirm {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em 1em 1em 1em;
+}
+
+.confirm-header {
+    color: #E7858F;
+}
+
+.confirm-rsvp-separator {
+    border-block-start: 1.5px solid #F38A8C;
+    display: flex;
+    width: 38%;
+    margin: 0 0 20px auto;
+}
+
+.rsvp-styles {
+    width: 100%;
+    margin: 10px 10px 10px 10px;
+    background: #FFE7E7;
+    padding: 3em;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.13);
+    position: relative;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    display: flex;
+    border-radius: 0;
+}
+
+.form-header {
+    margin: 0px 0px 20px 0px;
+    padding: 0em 0em 1em 0em;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: #E7858F;
+    width: 100%;
+    text-align: center;
+}
+
+.form-header p {
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+}
+
+.rsvp-form-wrapper {
+    width: 100%;
+    position: relative;
+    padding: 20px 10px 20px 10px;
+}
+
+.rsvp-form-fields-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.select-option {
+    padding-bottom: 30px;
+}
+
+.select-option:after {
+    content: "*";
+    color: red;
+    padding-inline-start: .2em;
+}
+
+.select-option, label {
+    font-size: 20px;
+    margin: 0;
+    padding: 15px 0;
+}
+
+label {
+    display: block;
+    font-weight: 400;
+    padding: 15px 0;
+}
+
+input {
+    margin: 0;
+    font-size: 19px;
+    display: inline;
+    outline: none;
+}
+
+input[type="text"] {
+    border: 1px solid #E7858F8A;
+    border-radius: 4px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 40px;
+    background: transparent;
+}
+
+input[type="radio"] {
+    align-self: center;
+}
+
+.field-option label {
+    padding-left: 3px;
+}
+
+.field-option-wrapper {
+    flex-basis: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.field-option {
+    padding-inline-end: 10px;
+    display: flex;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+
+}
+
+button {
+    background-color: #E7858F;
+    color: #fff;
+    border: none;
+    padding: 15px 80px 15px 80px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: 0.9em;
+    letter-spacing: 0.5px;
+    font-weight: lighter;
+    position: relative;
+    transition: 0.3s all;
+}
+
+.rsvp-background-overlay {   
+    background-image: url('../assets/flowers-bg-edit.png');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.25;
+    z-index: 0;
+}
+
+.arrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    fill: #ffe5e6;
+}
+
+footer {
+    position: relative;
+    padding: 5vh 0 3vh 0;
+    background: #e7858fa6;
+    width: 100%;
+    color: #000;
+    display: flex;
+    justify-content: center;
+}
+
+.Alex_logo {
+    height: 100px;
+    margin: 2vh 0;
+    object-fit: contain;
+}
+
+@supports (-webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0) ) or (clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0) ) {
+    .gifts-table-background-overlay, .rsvp-background-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        pointer-events: none;
+    }
+    .gifts-table-background-overlay {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 1024px) {
+    .rsvp-content {
+        flex-wrap: wrap;
+    }
+    .rsvp-styles {
+        padding: 1em;
+    }
+}
+
 @media screen and (min-width: 761px) and (max-width: 990px) {
     .center {
         flex-direction: row;
@@ -296,5 +693,33 @@ p.little {
 @media screen and (max-width: 400px) {
     .sponsors {
         padding-bottom: 60vh;
+    }
+}
+
+@media (min-width: 768px) {
+    .gift-card-outside {
+        width: 33.333%;
+    }
+    .confirm-container, .rsvp-form-container {
+        width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .gift-card-outside {
+        width: 100%;
+    }
+    .rsvp-form-container {
+        width: 100%;
+    }
+    .rsvp-styles {
+        margin: 0% 0% 0% 0%;
+        padding: 40px 10px 40px 10px;
+    }
+    .form-header p {
+        font-size: 18px;
+    }
+    label, .select-option {
+        font-size: 19px;
     }
 }

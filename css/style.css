@@ -118,6 +118,10 @@ a:active:hover, a:visited:hover, a:link:hover, a:active, a:hover, a:visited, a:l
     padding: 5vh 0 0 0;
 }
 
+p.schedule {
+    font-size: 1.95rem;
+}
+
 h1 {
     font-family: "Style Script", cursive;
     font-weight: 400;
@@ -693,6 +697,9 @@ footer {
 @media screen and (max-width: 700px) {
     .icon-option {
         display: block;
+    }
+    p.schedule {
+        font-size: 1.55rem;
     }
 }
 

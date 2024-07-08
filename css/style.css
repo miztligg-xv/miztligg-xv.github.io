@@ -131,7 +131,7 @@ h1 {
 
 .party-h1 {
     font-size: 38pt;
-    margin: 0 0 5vh 0;
+    margin: 5vh 0;
     font-family: "Playwrite NG Modern", cursive;
     font-optical-sizing: auto;
     font-style: normal;
@@ -163,10 +163,6 @@ p {
 
 p.little {
     font-size: 20pt;
-}
-
-.address {
-    margin-top: 5vh;
 }
 
 .hr_padrinos {
@@ -231,7 +227,10 @@ p.little {
 }
 
 .green-code {
-    color: #017a70;
+    background: -webkit-linear-gradient(#03a098, #01ef96);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .dress-code_img {
@@ -298,16 +297,12 @@ p.single-p.gifts-table-p.header-p {
     text-align: center;
 }
 
-.p_big {
-    font-size: 2.3rem;
-}
-
 .p-gallery {
     padding-top: 30px;
 }
 
 .gifts-table {
-    background: #ccb59e;
+    background: #ffdfad;
     min-height: 50vh;
     position: relative;
     padding: 0 20px 10vh;
@@ -317,7 +312,7 @@ p.single-p.gifts-table-p.header-p {
     z-index: 1;
 }
 
-.gifts-table-p, .confirm > * {
+.gifts-table-p {
     color: #9d8274;
 }
 
@@ -392,7 +387,7 @@ img.envelope {
 
 .gift-card-content a.amazon-btn {
     color: #FFFFFF;
-    background-color: #9d8274;
+    background-color: #E7858F;
     border-radius: 10px 10px 10px 10px;
     padding: 15px 60px 15px 60px;
     font-size: 18px;
@@ -410,7 +405,7 @@ img.envelope {
 .rsvp-container {
     padding: 50px 30px 50px 30px;
     position: relative;
-    background: #d0bba5;
+    background: #FFE5E6;
 }
 
 .rsvp-content {
@@ -446,8 +441,12 @@ img.envelope {
     padding: 1em 1em 1em 1em;
 }
 
+.confirm-header {
+    color: #E7858F;
+}
+
 .confirm-rsvp-separator {
-    border-block-start: 1.5px solid #9d8274;
+    border-block-start: 1.5px solid #F38A8C;
     display: flex;
     width: 38%;
     margin: 0 0 20px auto;
@@ -471,7 +470,7 @@ img.envelope {
     padding: 0em 0em 1em 0em;
     border-style: solid;
     border-width: 0px 0px 1px 0px;
-    border-color: #9d8274;
+    border-color: #E7858F;
     width: 100%;
     text-align: center;
 }
@@ -522,7 +521,7 @@ input {
 }
 
 input[type="text"] {
-    border: 1px solid #9d82748A;
+    border: 1px solid #E7858F8A;
     border-radius: 4px;
     width: 100%;
     padding: 10px;
@@ -560,7 +559,7 @@ input[type="radio"] {
 }
 
 button {
-    background-color: #9d8274;
+    background-color: #E7858F;
     color: #fff;
     border: none;
     padding: 15px 80px 15px 80px;
@@ -590,13 +589,13 @@ button {
     width: 100%;
     overflow: hidden;
     line-height: 0;
-    fill: #d0bba5;
+    fill: #ffe5e6;
 }
 
 footer {
     position: relative;
     padding: 5vh 0 3vh 0;
-    background: #d0bba5de;
+    background: #e7858fa6;
     width: 100%;
     color: #000;
     display: flex;
@@ -646,15 +645,6 @@ footer {
     }
 }
 
-@media (min-width: 760px) and (max-width: 950px){
-    .m-content-ab.timer-container > *, .m-content-ab.sponsors-card > * {
-        font-size: 30pt;
-    }
-    .m-content-ab.timer-container > h1.party-h1, .m-content-ab.sponsors-card > .new-font {
-        font-size: 21pt;
-    }
-}
-
 @media screen and (min-width: 761px) and (max-width: 990px) {
     .center {
         flex-direction: row;
@@ -679,10 +669,10 @@ footer {
     .hr_padrinos {
         width: 100%;
     }
-    .m-content-ab.timer-container > h1.party-h1, .m-content-ab.sponsors-card > .new-font {
-        font-size: 16pt;
+    .sponsors-card .new-font {
+        font-size: 3.86vh;
     }
-    .timer-container > *,.m-content-ab.sponsors-card > * {
+    .sponsors-card p {
         font-size: 9.1vh;
     }
 }
@@ -713,6 +703,18 @@ footer {
     }
 }
 
+@media screen and (max-width: 500px) {
+    .sponsors {
+        padding-bottom: 30vh;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sponsors {
+        padding-bottom: 60vh;
+    }
+}
+
 @media (min-width: 768px) {
     .gift-card-outside {
         width: 50%;
@@ -739,7 +741,11 @@ footer {
     label, .select-option {
         font-size: 19px;
     }
+<<<<<<< HEAD
     .sponsors {
         padding-bottom: 30vh;
     }
 }
+=======
+}
+>>>>>>> parent of 4540278 (Extra changes)

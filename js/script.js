@@ -170,10 +170,8 @@ playButton.addEventListener('click', () => {
   if (audio.paused) {
     audio.play();
     playIcon.src="../assets/pause-solid.svg";
-    // playButton.textContent = 'Pause';
   } else {
     audio.pause();
     playIcon.src="../assets/play-solid.svg";
-    // playButton.textContent = 'Play';
   }
 });
